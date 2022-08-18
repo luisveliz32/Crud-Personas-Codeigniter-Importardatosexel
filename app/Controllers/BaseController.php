@@ -46,7 +46,7 @@ class BaseController extends Controller
         $current_UriAux=current_url(true);
         
         $currentUriString=$current_UriAux->getScheme()."://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-        
+        echo $currentUriString;
         $uri =new \CodeIgniter\HTTP\URI($currentUriString); 
         echo $uri;
         /*for ($i=0; $i <$uri->getTotalSegments() ; $i++) { 
