@@ -51,6 +51,7 @@ class BaseController extends Controller
                 $uriFinal=str_replace("index.php/","",$uri);
                 $uriFinal=str_replace("index.php","",$uriFinal);
                 header("Location:$uriFinal");
+                echo "esta es la uri ".$uriFinal;
                 exit();
             }
         }
