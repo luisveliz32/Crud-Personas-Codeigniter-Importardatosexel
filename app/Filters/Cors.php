@@ -8,6 +8,7 @@ Class Cors implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
+        header('Content-Security-Policy: upgrade-insecure-requests');
         header('Access-Control-Allow-Origin: *');
         header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization");
         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
