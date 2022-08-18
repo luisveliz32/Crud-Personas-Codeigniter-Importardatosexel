@@ -56,6 +56,7 @@ class BaseController extends Controller
                 exit();
             }
         }
+        echo "llego esto ".$uriFinal;
     
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
