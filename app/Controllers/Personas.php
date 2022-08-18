@@ -3,7 +3,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\Persona;
-class Personas extends Controller{
+class Personas extends BaseController{
 
     public $db;
     

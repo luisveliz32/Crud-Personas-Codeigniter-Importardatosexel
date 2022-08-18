@@ -7,7 +7,7 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 use App\Models\Documento;
 use App\Models\Material;
-class Documentos extends Controller{
+class Documentos extends BaseController{
 
     public $db;
 

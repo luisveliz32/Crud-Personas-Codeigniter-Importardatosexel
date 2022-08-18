@@ -7,7 +7,7 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use App\Models\Material;
 use App\Models\Documento;
-class Materiales extends Controller{
+class Materiales extends BaseController{
     public $db;
 
     public function __construct(){
