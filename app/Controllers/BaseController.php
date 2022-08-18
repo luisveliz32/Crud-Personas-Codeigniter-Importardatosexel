@@ -42,7 +42,7 @@ class BaseController extends Controller
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
-        //echo "HOLA MUNDO";
+        /*//echo "HOLA MUNDO";
         $current_UriAux=current_url(true);
         
         $currentUriString=$current_UriAux->getScheme()."://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -58,7 +58,7 @@ class BaseController extends Controller
                 exit();
             }
         }
-        
+        */
     
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
