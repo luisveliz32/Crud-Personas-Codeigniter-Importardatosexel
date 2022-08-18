@@ -51,7 +51,7 @@ class BaseController extends Controller
             if ($uri->getSegment($i)=="index.php") {
                 $uriFinal=str_replace("index.php/","",$uri);
                 $uriFinal=str_replace("index.php","",$uriFinal);
-                header("Location: http://google.com");
+                header("Location: $uriFinal");
                 echo "esta es la uri ".$uriFinal;
                 exit();
             }
