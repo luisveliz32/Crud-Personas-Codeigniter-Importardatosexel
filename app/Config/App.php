@@ -23,7 +23,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost/dvsoft/public/';
+    public $baseURL = 'https://lmvc.herokuapp.com/';
 
     /**
      * --------------------------------------------------------------------------
