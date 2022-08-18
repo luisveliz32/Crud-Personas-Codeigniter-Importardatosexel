@@ -10,7 +10,8 @@ class Home extends BaseController
     {
         //$Persona=new Persona();
         //$datos['personas']=$Persona->where('estado', 1)->orderBy('id','ASC')->paginate(5);
-        return view('prueva');
+        //return view('prueva');
+        return $this->redirect(base_url('/AdministrarUsuarios'));
     }
     
 
