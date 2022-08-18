@@ -42,6 +42,7 @@ class BaseController extends Controller
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
+        echo "HOLA MUNDO";
         $current_UriAux=current_url(true);
         $currentUriString=$current_UriAux->getScheme()."://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         $uri =new \CodeIgniter\HTTP\URI($currentUriString); 
