@@ -93,8 +93,7 @@ class Documentos extends Controller{
                 $ultimoinser=$documentod->orderBy('id','DESC')->first();
                 $ul=$ultimoinser['id'];
                 for($indicefila=2; $indicefila<=$nurofilas; $indicefila++){
-                    $valor= $hojaactual->getCellByColumnAndRow($indicecolumna,$indicefila);
-
+                   
                         $datosm=[
                             'id_documento'=>$ul,
                             'nro'=>$hojaactual->getCellByColumnAndRow(1,$indicefila),
