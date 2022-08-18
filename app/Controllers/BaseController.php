@@ -42,13 +42,13 @@ class BaseController extends Controller
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
-        echo "HOLA MUNDO";
+        //echo "HOLA MUNDO";
         $current_UriAux=current_url(true);
         
         $currentUriString=$current_UriAux->getScheme()."://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         //echo $currentUriString;
         $uri =new \CodeIgniter\HTTP\URI($currentUriString); 
-        echo $uri;
+        //echo $uri;
         for ($i=0; $i <$uri->getTotalSegments() ; $i++) { 
             if ($uri->getSegment($i)=="index.php") {
                 $uriFinal=str_replace("index.php/","",$uri);
