@@ -20,7 +20,7 @@
         <div class="modal fade" id="agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-            <form action="<?=site_url('/guardar')?>" method="post" id="guar"enctype="Multipart/form-data">
+            <form action="<?=base_url('/guardar')?>" method="post" id="guar"enctype="Multipart/form-data">
             <div class="modal-header text-center ">
                 <h5 class="modal-title " id="exampleModalLabel">Agregar persona</h5> <br>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -63,7 +63,7 @@
          <div class="modal fade" id="modificar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-            <form action="<?=site_url('/modificar')?>" method="post" id="mod"enctype="Multipart/form-data">
+            <form action="<?=base_url('/modificar')?>" method="post" id="mod"enctype="Multipart/form-data">
             <div class="modal-header text-center ">
                 <h5 class="modal-title " id="exampleModalLabel">Modificar Persona</h5> <br>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
