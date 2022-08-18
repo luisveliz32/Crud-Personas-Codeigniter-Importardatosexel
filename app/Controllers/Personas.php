@@ -31,18 +31,23 @@ class Personas extends BaseController{
             1 => 'nombre_completo',
             2 => 'fecha_nacimiento',
             3 => 'imagen',
-            4 => 'estado'
+            //4 => 'estado'
         ];
-        $sql_count="SELECT count(id) as total From personas";
-        $sql_data="SELECT * FROM personas";
+        $sql_count="SELECT count(id) as total From personas where estado=1 ";
+        $sql_data="SELECT * FROM personas where estado=1";
         $condition= "";
 
         if(!empty($valor_buscado)){
             foreach($table_map as $key=>$val){
+                if ($table_map[$key]== 'imagen') {
+                    $condition .=" OR ".$val." LIKE '%".$valor_buscado."%')";
+                }
                 if($table_map[$key]== 'id' ){
-                    $condition .=" WHERE ".$val." LIKE '%".$valor_buscado."%'";
-                }else{
-                    $condition .=" OR ".$val." LIKE '%".$valor_buscado."%'";                }
+                    $condition .=" AND (".$val." LIKE '%".$valor_buscado."%'";
+                }
+                if (($table_map[$key]!== 'id') && ($table_map[$key]!== 'v.pct_avance')) {
+                    $condition .=" OR ".$val." LIKE '%".$valor_buscado."%'";  
+                }
             }
         }
 
