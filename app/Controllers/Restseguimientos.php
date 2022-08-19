@@ -10,7 +10,7 @@ class Restseguimientos extends ResourceController{
 
     function create(){
         $material=new Seguimiento();
-        if ($this->validate('material')) {
+        
             if($imagen1=$this->request->getFile('imagen1')){
                 $nuevonombre1=$imagen1->getRandomName();
                 $imagen1->move('../public/uploads/',$nuevonombre1);
@@ -44,9 +44,7 @@ class Restseguimientos extends ResourceController{
                 'imagen4'=>$nuevonombre4,
             ]);
             return $this->genericResponce($this->model->find($id),"",200);
-        }
-        $validation= \Config\Services::validation();
-        return $this->genericResponce(null,$validation->getErrors(),500);
+       
     }
     //funcion generica para mostrar data mesajes codigo 
     private function genericResponce($data,$msj,$code){
