@@ -43,7 +43,7 @@ class Restseguimientos extends ResourceController{
                 'imagen3'=>$nuevonombre3,
                 'imagen4'=>$nuevonombre4,
             ]);
-            return $this->genericResponce($this->model->find($id),"",200);
+            return $this->genericResponce($this->request->getPost(),"",200);
        
     }
     //funcion generica para mostrar data mesajes codigo 
